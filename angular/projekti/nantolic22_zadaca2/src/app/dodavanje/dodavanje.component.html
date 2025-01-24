@@ -1,0 +1,37 @@
+<header>Dodavanje osoba</header> 
+<main>
+  <h1>Pretraživanje osoba na TMDB</h1>
+
+  <input type="text" [(ngModel)]="pretrazivanje" placeholder="Unesite ime osobe">
+  <button (click)="pretraziOsobe()">Traži</button>
+  <br>
+  <div id="pagination">
+    <button *ngIf="trenutnaStranica > 1" (click)="promijeniStranicu(trenutnaStranica - 1)">Prethodna</button>
+    <span>Stranica {{ trenutnaStranica }} od {{ ukupnoStranica }}</span>
+    <button *ngIf="trenutnaStranica < ukupnoStranica" (click)="promijeniStranicu(trenutnaStranica + 1)">Sljedeća</button>
+  </div>
+
+  <div id="resultsContainer">
+    <table id="resultsTable">
+      <thead>
+        <tr>
+          <th>Ime i Prezime</th>
+          <th>Poznat po</th>
+          <th>Akcija</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let osoba of osobe">
+          <td>{{ osoba.name }}</td>
+          <td>{{ osoba.known_for_department }}</td>
+          <td>
+            <button *ngIf="!osobaUBazi(osoba.id)" (click)="dodajOsobu(osoba)">Dodaj</button>
+            <button *ngIf="osobaUBazi(osoba.id)" (click)="ukloniIzBaze(osoba.id)">Obriši</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+
+  </div>
+</main>

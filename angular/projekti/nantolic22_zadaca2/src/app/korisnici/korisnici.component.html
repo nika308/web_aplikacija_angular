@@ -1,0 +1,29 @@
+<header>Korisnici</header>
+
+<main>
+  <div *ngIf="loading">Učitavanje korisnika...</div>
+
+  <div *ngIf="error" style="color: red;">{{ error }}</div>
+  
+  <table *ngIf="!loading && !error">
+    <thead>
+      <tr>
+        <th>Korisnicko ime</th>
+        <th>Email</th>
+        <th>Akcija</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let korisnik of korisnici">
+        <td>{{ korisnik.korime }}</td>
+        <td>{{ korisnik.email }}</td>
+        <td>
+          <button *ngIf="korisnik.korime !== 'admin'" (click)="obrisiKorisnika(korisnik.korime)">Obriši</button>
+          <span *ngIf="korisnik.korime === 'admin'">Nije moguće obrisati admina</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
+</main>
+

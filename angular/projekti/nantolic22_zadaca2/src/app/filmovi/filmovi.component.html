@@ -1,0 +1,48 @@
+<header>Pretraživanje filmova</header>
+<main>
+  <div>
+    <label for="datumOd">Datum od:</label>
+    <input type="date" [(ngModel)]="datumOd" id="datumOd">
+    
+    <label for="datumDo">Datum do:</label>
+    <input type="date" [(ngModel)]="datumDo" id="datumDo">
+    
+    <button (click)="pretraziFilmovePoDatumu()">Pretraži</button>
+  </div>
+  
+  <div>
+    <button *ngIf="trenutnaStranica > 1" (click)="promijeniStranicu(trenutnaStranica - 1)">Prethodna</button>
+    <span>Stranica {{ trenutnaStranica }}</span>
+    <button *ngIf="filmovi.length === 20" (click)="promijeniStranicu(trenutnaStranica + 1)">Sljedeća</button>
+  </div>
+
+  <div *ngIf="filmovi.length > 0">
+    <table>
+      <thead>
+        <tr>
+          <th>Naziv</th>
+          <th>Originalni naziv</th>
+          <th>Opis</th>
+          <th>Datum izlaska</th>
+          <th>Popularnost</th>
+          <th>Jezik</th>
+          <th>Poster</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let film of filmovi">
+          <td>{{ film.naziv }}</td>
+          <td>{{ film.originalni_naziv }}</td>
+          <td>{{ film.opis }}</td>
+          <td>{{ film.datum_izlaska }}</td>
+          <td>{{ film.popularnost }}</td>
+          <td>{{ film.jezik }}</td>
+          <td>
+            <img [src]="'https://image.tmdb.org/t/p/w600_and_h900_bestv2/' + film.poster" alt="Slika filma {{film.naziv}}">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</main>

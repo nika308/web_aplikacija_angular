@@ -1,0 +1,18 @@
+<header>Početna stranica</header>
+
+<main id="prijava2">
+  <div *ngIf="poruka">{{ poruka }}</div>
+
+  <div *ngIf="korisnik && korisnik.korime">
+    <h2>Dobrodošli, {{ korisnik.korime }}!</h2>
+    <p>Email: {{ korisnik.email }}</p>
+    <p>Adresa: {{ korisnik.adresa || 'Nema podataka' }}</p>
+    <p>Datum rođenja: {{ korisnik.datum_rodenja || 'Nema podataka' }}</p>
+    <p>Telefon: {{ korisnik.telefon || 'Nema podataka' }}</p>
+    <p>Status servisa: 
+      <span *ngIf="imaPristup()">Možete koristiti REST servis.</span>
+      <span *ngIf="!imaPristup()">Ne možete koristiti REST servis.</span>
+    </p>
+  </div>
+</main>
+

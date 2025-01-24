@@ -1,0 +1,49 @@
+:host {
+    ::ng-deep {
+      h3, h4, p, header {
+        font-family: Arial, sans-serif; 
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        font-family: Arial, sans-serif;
+      }
+      
+      th, td {
+        padding: 12px;
+        text-align: left;
+      }
+      
+      th {
+        background-color: #f8f8f8;
+        font-weight: bold;
+      }
+      
+      td {
+        background-color: #f9f9f9;
+      }
+  
+      tr {
+        &:nth-child(even) td {
+          background-color: #f1f1f1;
+        }
+  
+        &:hover td {
+          background-color: #e9f4ff;
+        }
+      }
+      
+      td[style="color: red;"] {
+        color: red;
+        font-weight: bold;
+      }
+      
+      span {
+        font-weight: bold;
+        color: #333c;
+      }
+    }
+  }
+  

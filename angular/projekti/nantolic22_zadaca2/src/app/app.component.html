@@ -1,0 +1,18 @@
+<header>
+  <h1>{{title}}</h1>
+  <script src="https://www.google.com/recaptcha/enterprise.js?render=6Ld1Vq0qAAAAAND4waYiz2Yji2-8MugLVw57r4YA"></script>
+</header>
+
+<nav>
+  <a routerLink="/pocetna" id="pocetna" *ngIf="korisnikKorisnik() || korisnikAdmin()">Početna</a>
+  <a routerLink="/prijava" id="prijava" *ngIf="!prijavljenKorisnik()">Prijava</a>
+  <a routerLink="/odjava" id="odjava" *ngIf="prijavljenKorisnik()" (click)="odjava()">Odjava</a>
+  <a routerLink="/registracija" id="registracija" *ngIf="!prijavljenKorisnik()">Registracija</a>
+  <a routerLink="/osobe" id="osobe" *ngIf="korisnikKorisnik() || korisnikAdmin()">Osobe</a>
+  <a routerLink="/filmovi" id="filmovi" *ngIf="korisnikKorisnik() || korisnikAdmin()">Filmovi</a>
+  <a routerLink="/korisnici" id="korisnici" *ngIf="korisnikAdmin()">Korisnici</a>
+  <a routerLink="/dodavanje" id="dodavanje" *ngIf="korisnikAdmin()">Dodavanje</a>
+  <a routerLink="/dokumentacija" id="dokumentacija" (click)="dokumentacija()">Dokumentacija</a>
+</nav>
+
+<router-outlet></router-outlet>

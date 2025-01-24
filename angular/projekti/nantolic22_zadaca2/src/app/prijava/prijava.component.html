@@ -1,0 +1,35 @@
+<header>Prijava</header>
+
+<main id="prijava2">
+    <div id="poruka" *ngIf="errorPoruka" class="error-message">{{ errorPoruka }}</div>
+    <form (ngSubmit)="prijaviSe()">
+        <label for="korime">Korisničko ime</label>
+        <input type="text" name="korime" id="korime" [(ngModel)]="korisnickoIme" required/>
+        <br/>
+        <label for="lozinka">Lozinka</label>
+        <input type="password" name="lozinka" [(ngModel)]="lozinka" id="lozinka" required/>
+        <br />
+        <input type="submit" value="Prijavi se" />
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>Uloga</th>
+                <th>Korisničko ime</th>
+                <th>Lozinka</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Admin</td>
+                <td>admin</td>
+                <td>rwa</td>
+            </tr>
+            <tr>
+                <td>Registrirani korisnik</td>
+                <td>obican</td>
+                <td>rwa</td>
+            </tr>
+        </tbody>
+    </table>
+</main>

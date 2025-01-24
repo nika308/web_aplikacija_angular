@@ -1,0 +1,28 @@
+<header>Osobe</header>
+<main>
+  <div class="kontrole">
+    <label for="brOsoba">Broj osoba po stranici:</label>
+    <select id="brOsoba" (change)="promijeniStavkePoStranici()">
+      <option value="5">5</option>
+      <option value="10" selected>10</option>
+      <option value="20">20</option>
+      <option value="50">50</option>
+    </select>
+  </div>
+
+  <div>
+    <button (click)="idiNaStranicu('prethodna')" [style.display]="trenutnaStranica <= 1 ? 'none' : 'inline-block'">Prethodna</button>
+    <span id="strInfo">Stranica {{trenutnaStranica}}</span>
+    <button (click)="idiNaStranicu('sljedeca')" [style.display]="trenutnaStranica >= ukupnoStranica ? 'none' : 'inline-block'">Sljedeća</button>
+  </div>
+
+  <div id="prikazOsoba" class="prikaz_osoba">
+    <div *ngIf="error" style="color: red;">{{ error }}</div>
+
+    <div *ngFor="let osoba of osobe" class="prikazOsobe">
+      <img [src]="'https://image.tmdb.org/t/p/w600_and_h900_bestv2/' + osoba.slika" alt="Slika osobe {{osoba.ime_prezime}}">
+      <h3>{{ osoba.ime_prezime }}</h3>
+      <p>{{ osoba.poznat_po }}</p>
+    </div>
+  </div>
+</main>

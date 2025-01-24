@@ -1,0 +1,32 @@
+<header>Registracija</header>
+<main id="prijava2">
+    <div id="poruka" *ngIf="errorPoruka" class="error-message">{{ errorPoruka }}</div>
+    <form (ngSubmit)="registrirajSe()">
+        <label for="ime">Ime</label>
+        <input type="text" name="ime" id="ime" [(ngModel)]="ime" />
+        <br>
+        <label for="prezime">Prezime</label>
+        <input type="text" name="prezime" id="prezime" [(ngModel)]="prezime"/>
+        <br>
+        <label for="korime">Korisničko ime</label>
+        <input type="text" name="korime" id="korime" [(ngModel)]="korisnickoIme"/>
+        <br>
+        <label for="lozinka">Lozinka</label>
+        <input type="password" name="lozinka" id="lozinka" [(ngModel)]="lozinka"/>
+        <br>
+        <label for="email">email</label>
+        <input type="email" name="email" id="email" [(ngModel)]="email"/>
+        <br>
+        <label for="adresa">Adresa:</label>
+        <input type="text" name="adresa" id="adresa" [(ngModel)]="adresa"/>
+        <br>
+        <label for="datum_rodenja">Datum rođenja:</label>
+        <input type="date" name="datum_rodenja" id="datum_rodenja" [(ngModel)]="datumRodenja"/>
+        <br>
+        <br>
+        <label for="telefon">Telefon:</label>
+        <input type="text" name="telefon" id="telefon" [(ngModel)]="telefon"/>
+        <br>
+        <input type="submit" value="Registriraj se" />
+    </form>
+</main>

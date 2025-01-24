@@ -1,0 +1,286 @@
+    <body>
+        <header>Dokumentacija</header>
+        <main>
+            <section>
+                <h3>Informacije o autoru</h3>
+                <img src="http://localhost:12222/dokumentacija/slika_nantolic22.jpeg" alt="Slika s X-ice">
+                <p>Nika Antolić | <a href="mailto:nantolic22@student.foi.hr">nantolic22@student.foi.hr</a></p>
+                <br><br><br><br><br><br><br><br><br>
+                <h3>ERA modeli</h3>
+                <div>
+                    <p>ERA model web servisa | <a href="http://localhost:12222/dokumentacija/RWA2024_nantolic22_web.png">
+                        <img src="http://localhost:12222/dokumentacija/RWA2024_nantolic22_web.png" alt="Slika era modela za Web servis">
+                    </a></p>
+                </div>
+                <div>
+                    <p>ERA model REST servisa | <a href="http://localhost:12222/dokumentacija/RWA2024nantolic22_servis.png">
+                        <img src="http://localhost:12222/dokumentacija/RWA2024nantolic22_servis.png" alt="Slika era modela za REST servis">
+                    </a></p>
+                </div>
+            </section>
+
+            <section>
+                <h4>Tablica 2. Pregled resursa, metoda i parametara REST servisa</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Resurs <br> Parametri</th>
+                            <th>GET čitanje</th>
+                            <th>POST kreiranje</th>
+                            <th>PUT ažuriranje</th>
+                            <th>DELETE brisanje</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>servis/korisnici</td>
+                            <td>napravljeno</td>
+                            <td style="color: green;">polunapravljeno (ne provjerava se admin)</td>
+                            <td>napravljeno</td>
+                            <td>napravljeno</td>
+                        </tr>
+                        <tr>
+                            <td>servis/korisnici/{korime}</td>
+                            <td>napravljeno</td>
+                            <td>napravljeno</td>
+                            <td>napravljeno</td>
+                            <td style="color: green;">polunapravljeno (ne provjerava se admin)</td>
+                        </tr>
+                        <tr>
+                            <td>servis/osoba?/stranica=broj</td>
+                            <td>napravljeno</td>
+                            <td style="color: red;">nije napravljeno</td>
+                            <td>napravljeno</td>
+                            <td>napravljeno</td>
+                        </tr>
+                        <tr>
+                            <td>servis/osoba/{id}</td>
+                            <td>napravljeno</td>
+                            <td>napravljeno</td>
+                            <td>napravljeno</td>
+                            <td>napravljeno</td>
+                        </tr>
+                        <tr>
+                            <td>servis/osoba/{id}/film?stranica=broj</td>
+                            <td>napravljeno</td>
+                            <td>napravljeno</td>
+                            <td style="color: red;">nije napravljeno</td>
+                            <td style="color: red;">nije napravljeno</td>
+                        </tr>
+                        <tr>
+                            <td>servis/film?stranica=broj&[datumOd=timestamp&datumDo=timestamp]</td>
+                            <td>napravljeno</td>
+                            <td style="color: red;">nije napravljeno</td>
+                            <td>napravljeno</td>
+                            <td>napravljeno</td>
+                        </tr>
+                        <tr>
+                            <td>servis/film/{id}</td>
+                            <td>napravljeno</td>
+                            <td>napravljeno</td>
+                            <td>napravljeno</td>
+                            <td>napravljeno</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section>
+                <h4>Tablica 3. Pregled funkcionalnosti Web aplikacije</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Uloga</th>
+                            <th>Stranica/e</th>
+                            <th>Opis</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Gost</td>
+                            <td>Početna</td>
+                            <td>napravljeno</td>
+                        </tr>
+                        <tr>
+                            <td>Gost</td>
+                            <td>Dokumentacija</td>
+                            <td>napravljeno</td>
+                        </tr>
+                        <tr>
+                            <td>Gost</td>
+                            <td>Prijava, Odjava</td>
+                            <td>napravljeno</td>
+                        </tr>
+                        <tr>
+                            <td>Gost</td>
+                            <td>Registracija</td>
+                            <td>napravljeno</td>
+                        </tr>
+                        <tr>
+                            <td>Korisnik</td>
+                            <td>Početna</td>
+                            <td style="color: green;"> polunapravljeno: napravljen prikaz podataka korisnika</td>
+                        </tr>
+                        <tr>
+                            <td>Korisnik</td>
+                            <td>Osobe</td>
+                            <td>napravljeno</td>
+                        </tr>
+                        <tr>
+                            <td>Korisnik</td>
+                            <td>Detalji</td>
+                            <td style="color: red;">nije napravljeno</td>
+                        </tr>
+                        <tr>
+                            <td>Administrator</td>
+                            <td>Korisnici</td>
+                            <td style="color: green;"> polunapravljeno: napravljen samo pregled korisnika te brisanje korisnika iz baze</td>
+                        </tr>
+                        <tr>
+                            <td>Administrator</td>
+                            <td>Dodavanje</td>
+                            <td style="color: green;"> polunapravljeno: napravljeno samo dodavanje osoba i brisanje osoba iz baze</td>
+                        </tr>
+                        </tbody>
+                </table>
+            </section>
+
+            <section>
+                <h4>Tablica 4. Elementi koji su napravljeni iz zadaće 2.</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Korak</th>
+                            <th>Opis</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1. Na stranicu dokumentacija ažurirati tablice iz prve zadaće oko informacija koji dijelovi su
+                                napravljeni za servis odnosno aplikaciju. Ako je nešto napravljeno dijelomično treba to jasno
+                                napisati koji dio je napravljen.
+                            </td>
+                            <td>napravljeno</td>
+                        </tr>
+                        <tr>
+                            <td>2. Na stranicu dokumentacija kreirati listu po koracima (počevši od zadaci) ovog dokumenta u kojoj
+                                jasno pišu elementi opisa 2 zadaće koji su napravljeni.
+                            </td>
+                            <td>napravljeno</td>
+                        </tr>
+                        <tr>
+                            <td>3. Potrebno je ugraditi dokumentaciju unutar angular aplikacije.
+                            </td>
+                            <td>napravljeno</td>
+                        </tr>
+                        <tr>
+                            <td>4.Postoji package.json u posluzitelj direktoriju tako da se sa npm run pripremi pripreme svi
+                                potrebni moduli i sa npm run servis pokrene naš poslužitelj servisa koji sve poslužuje na portu
+                                12222 kada smo na localhost. Što znači da predana verzija mora imati u posuzitelj/build
+                                direktoriju komplajliranu verziju poslužitelja. U direktoriju angular isto tako postoji jedan
+                                package.json, tsconfig.json i angular.json da se može pokrenuti angular projekt sa ng serve ako
+                                bude ocjenivač htio nešto provjeriti.
+                            </td>
+                            <td>napravljeno</td>
+                        </tr>
+                        <tr>
+                            <td>5.Pozadinski dio servisa sada poslužuje kompajliranu verziju Angular aplikacije na početnoj
+                                korijenskoj putanji (/). U preglednik se upisuje http://localhost:12222/ i otvara se angular
+                                aplikacija. Što znači da mora postojati kompajlirana verzija aplikacije u posluzitelj/angular
+                                direktoriju.
+                            </td>
+                            <td>napravljeno</td>
+                        </tr>
+                        <tr>
+                            <td>6. Kod predavanja zadaće izbrisati svoje ključeve za TMDB servis iz konfiguracijske datoteke svaki
+                                student ubacuje svoje ključeve u konfiguracijsku datoteku kod testiranja.
+                             </td>
+                            <td>napravljeno</td>
+                        </tr>
+                        <tr>
+                            <td>7.Pozadinski dio web aplikacije iz zadaće 1 sada treba prebaciti u servis na način da se koristi
+                                putanja /servis/app/{resurs} (npr. /servis/app/korisnici). Na taj način servis sada nudi
+                                kompletnu podršku za angular aplikaciju u obliku REST servisa. Stoga REST servis sadrži sve
+                                metode kako je to bilo u prvoj zadaći za rad s bazom podataka koja sadrži osobe, filmove.
+                                Dodatno svi ostali pozadinski dijelovi prve zadaće (npr. komunikacija sa TMDB servisom, rad sa
+                                bazom korisnika) koji su bili ugrađeni u web aplikaciju se sada tretiraju kao proširenje REST
+                                servisa sa bazičnom putanjom /servis/app/{resurs}. U ovoj zadaći više nema poslužitelja web
+                                aplikacije pa samim time niti komunikacije između dva poslužitelja na pozadinskom dijelu pa
+                                treba napraviti prilagodbe.
+                            </td>
+                            <td>napravljeno</td>
+                        </tr>
+                        <tr>
+                            <td>8. Klijentski dio JavaScript-a Web Aplikacije HTML, CSS i JS na strani klijenta prebaciti u
+                                Angular sa TypeScript-om i SCSS-om.
+                            </td>
+                            <td>napravljeno</td>
+                        </tr>
+                        <tr>
+                            <td>9. Klijentski dio aplikacije sada mora slati sve preko fetch zahtjeva. Angular aplikacija nikad ne
+                                komunicira direktno sa TMDB servisom već preko vlastitog servisa.
+                            </td>
+                            <td>napravljeno</td>
+                        </tr>
+                        <tr>
+                            <td>10. Informacije o bazičnoj adresi i portu za pozadinski dio koji koristi Angular aplikacija kod slanja
+                                fetch zahtjeva čitaju se iz environment datoteke. Hard kodirana varijanta nosi manje bodova.
+                            </td>
+                            <td>napravljeno</td>
+                        </tr>
+                        <tr>
+                            <td>11. Potrebno je doraditi dizajn stranice ako u prvoj zadaći niste vodili o tome previše računa. Dizajn
+                                treba prebaciti korištenjem Sass preprocesora u Sass ili Scss sintaksi. Dozvoljeno je korištenje
+                                Angular Material dodatka za obrasce.
+                             </td>
+                            <td>napravljeno</td>
+                        </tr>
+                        <tr>
+                            <td>12. Dodati reCaptcha v3 sustav na obrasce registracija i prijava.
+                             </td>
+                             <td style="color: red;">nije napravljeno</td>
+                        </tr>
+                        <tr>
+                            <td>13. Potrebno je dodati stranicu aktiviranje dvorazinske autentifikacije gdje postoji opcija da se uključi
+                                dvorazinska autentifikacija. Prilikom prvog uključivanja dvorazinske autentifikacije potrebno je
+                                kreirati tajni ključ koji se sprema u bazu i prikazuje korisniku u tekstualnom obliku i u obliku QR
+                                koda (za dodatne bodove). Korisnik može isključiti dvorazinsku autentifikaciju ili ponovo
+                                uključiti pa se mu ponovo prikaže tajni ključ (ne generira se novi) i QR kod. Prilikom registracije
+                                ovo je isključena dvorazinska autentifikacija.
+                             </td>
+                             <td style="color: red;">nije napravljeno</td>
+                        </tr>
+                        <tr>
+                            <td>14. Potrebno je doraditi prijavu da se autentifikacija radi u dvije razine. Prvo korisničko ime i lozinka
+                                te nakon toga TOTP ako je uključena dvorazinska autentifikacija za tog korisnika ako je TOTP
+                                uključen za tog korisnika.
+                             </td>
+                             <td style="color: red;">nije napravljeno</td>
+                        </tr>
+                        <tr>
+                            <td>15. Inicijalno mora postojati korisnik iz svake uloge koji nema TOTP uključen i treba navesti podatke
+                                na stranici prijava radi lakšeg testiranja.
+                             </td>
+                             <td style="color: green;">polunapravljeno (postoje podaci, ali nije napravljen TOTP općenito)</td>
+                        </tr>
+                        <tr>
+                            <td>16. Dodati stranicu gdje postoji mogućnost filtriranja filmova u bazi prema datumu od i datumu do
+                                moguće je upisati samo jedan ili oba datuma. Ako datuma nema znači žele se svi. Obavezno
+                                podesiti straničenje sa 20 zapisa.
+                             </td>
+                            <td>napravljeno</td>
+                        </tr>
+                        <tr>
+                            <td>17. ZA DODATNE BODOVE: Potrebno je dodati mogućnost postavljanja (eng. upload) vlastitih
+                                slika za filmove i prikazivati kao drugu galeriju ispod već postojeće galerije. Slike se spremaju na
+                                pozadinsku stranu u poseban direktorij, a samo se naziv slike sprema u bazu podataka.
+                             </td>
+                             <td style="color: red;">nije napravljeno</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+        </main>
+    </body>
+
